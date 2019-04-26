@@ -5,3 +5,6 @@ console.log(getNotes());
 
 console.log(validator.isEmail('dean@somesitecom'));
 console.log(validator.isEmail('dean@somesite.com'));
+
+console.log(validator.isURL('dean.com'));
+console.log(validator.isURL('dean'));
