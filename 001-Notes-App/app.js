@@ -1,4 +1,4 @@
 const getNotes = require('./notes.js');
-const express = require('express');
+const validator = require('validator');
 
 console.log(getNotes());
