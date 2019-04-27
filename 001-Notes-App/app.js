@@ -19,6 +19,22 @@ yargs.command({
     }
 });
 
+yargs.command({
+    command: 'list',
+    describe: 'List the notes',
+    handler: function() {
+        console.log('Listing the notes!')
+    }
+});
+
+yargs.command({
+    command: 'read',
+    describe: 'Read a note',
+    handler: function() {
+        console.log('Reading a note!')
+    }
+});
+
 console.log(yargs.argv);
 
 //1,3,6,8 points where the git color key changes...
