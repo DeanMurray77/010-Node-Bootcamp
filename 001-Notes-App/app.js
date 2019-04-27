@@ -3,6 +3,7 @@ const yargs = require('yargs');
 
 const getNotes = require('./notes.js');
 
+// Create Add command
 yargs.command({
     command: 'add',
     describe: 'Add a new note',
@@ -11,6 +12,7 @@ yargs.command({
     }
 });
 
+// Create Remove command
 yargs.command({
     command: 'remove',
     describe: 'Remove a note',
@@ -19,6 +21,7 @@ yargs.command({
     }
 });
 
+// Create List command
 yargs.command({
     command: 'list',
     describe: 'List the notes',
@@ -27,6 +30,7 @@ yargs.command({
     }
 });
 
+// Create Read command
 yargs.command({
     command: 'read',
     describe: 'Read a note',
