@@ -1,12 +1,9 @@
-const getNotes = require('./notes.js');
 const chalk = require('chalk');
+const yargs = require('yargs');
 
-const command = process.argv[2];
+const getNotes = require('./notes.js');
 
-if(command === 'add') {
-    console.log('Adding note!');
-} else if(command === 'remove') {
-    console.log('Removing note!');
-}
+console.log(process.argv);
+console.log(yargs.argv);
 
 //1,3,6,8 points where the git color key changes...
