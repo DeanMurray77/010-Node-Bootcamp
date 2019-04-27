@@ -1,13 +1,12 @@
 const getNotes = require('./notes.js');
-const validator = require('validator');
 const chalk = require('chalk');
 
-console.log(getNotes());
-console.log(chalk.greenBright('Success'));
-console.log(chalk.red.bold.inverse("Error"));
-console.log("what?");
+const command = process.argv[2];
 
-console.log("Hello " +process.argv[2]);
+if(command === 'add') {
+    console.log('Adding note!');
+} else if(command === 'remove') {
+    console.log('Removing note!');
+}
 
-console.log(process.argv);
 //1,3,6,8 points where the git color key changes...
