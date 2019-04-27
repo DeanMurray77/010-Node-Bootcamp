@@ -7,5 +7,7 @@ console.log(chalk.greenBright('Success'));
 console.log(chalk.red.bold.inverse("Error"));
 console.log("what?");
 
+console.log("Hello " +process.argv[2]);
 
+console.log(process.argv);
 //1,3,6,8 points where the git color key changes...
