@@ -14,11 +14,14 @@ yargs.command({
             type: 'string'
         },
         body: {
-            describe: 'Note body'
+            describe: 'Note body',
+            demandOption: true,
+            type: 'string'
         }
     },
     handler: function(argv) {
-        console.log('Adding a new note!', argv);
+        console.log('Title: ', argv.title);
+        console.log('Body: ' + argv.body);
     }
 });
 
