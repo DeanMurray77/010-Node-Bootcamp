@@ -7,8 +7,18 @@ const getNotes = require('./notes.js');
 yargs.command({
     command: 'add',
     describe: 'Add a new note',
-    handler: function() {
-        console.log('Adding a new note!')
+    builder: {
+        title: {
+            describe: 'Note title',
+            demandOption: true,
+            type: 'string'
+        },
+        body: {
+            describe: 'Note body'
+        }
+    },
+    handler: function(argv) {
+        console.log('Adding a new note!', argv);
     }
 });
 
@@ -39,6 +49,6 @@ yargs.command({
     }
 });
 
-console.log(yargs.argv);
+yargs.parse();
 
 //1,3,6,8 points where the git color key changes...
