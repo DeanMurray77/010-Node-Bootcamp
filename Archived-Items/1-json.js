@@ -9,8 +9,9 @@ const fs = require('fs');
 
 // fs.writeFileSync('1-json.json', bookJSON);
 
-const jsonFile = fs.readFileSync('1-json.json');
+const dataBuffer = fs.readFileSync('1-json.json');
+const dataJSON = dataBuffer.toString();
+const parsedData = JSON.parse(dataJSON);
 
-const parsedData = JSON.parse(jsonFile);
 console.log(parsedData.author);
 console.log(parsedData.title);
