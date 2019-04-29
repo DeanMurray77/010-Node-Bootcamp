@@ -1,14 +1,14 @@
 const fs = require('fs');
 
 const dataBuffer = fs.readFileSync('data.json');
-let dataJSON = dataBuffer.toString();
-const data = JSON.parse(dataJSON);
+const dataJSON = dataBuffer.toString();
+const user = JSON.parse(dataJSON);
 
-data.name = 'Dean';
-data.age = '42';
+user.name = 'Sage';
+user.age = '22';
 
-dataJSON = JSON.stringify(data);
-fs.writeFileSync('newData.json', dataJSON);
+const userJSON = JSON.stringify(user);
+fs.writeFileSync('data.json', userJSON);
 
 
 
