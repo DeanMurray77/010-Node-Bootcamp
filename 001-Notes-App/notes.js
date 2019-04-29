@@ -28,7 +28,7 @@ const addNote = (title, body) => {
         return note.title === title;
     })
 
-    if(!filteredNotes.length) {
+    if(filteredNotes.length === 0) {
         notes.push({
             title: title,
             body: body
@@ -40,11 +40,16 @@ const addNote = (title, body) => {
 
 }
 
-const removeNote = () => {
-
+const removeNote = (title) => {
+    const notes = loadNotes();
+    const filteredNotes = notes.filter((note)=> {
+        return note.title !== title;
+    })
+    saveNotes(filteredNotes);
 }
 
 module.exports = {
     getNotes: getNotes,
-    addNote: addNote
+    addNote: addNote,
+    removeNote: removeNote
 }
