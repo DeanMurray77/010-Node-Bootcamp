@@ -25,9 +25,7 @@ const loadNotes = () => {
 const addNote = (title, body) => {
     const notes = loadNotes();
 
-    const filteredNotes = notes.filter((note) => {
-        return note.title === title;
-    })
+    const filteredNotes = notes.filter((note) => note.title === title)
 
     if(filteredNotes.length === 0) {
         notes.push({
@@ -44,9 +42,7 @@ const addNote = (title, body) => {
 
 const removeNote = (title) => {
     const notes = loadNotes();
-    const filteredNotes = notes.filter((note)=> {
-        return note.title !== title;
-    })
+    const filteredNotes = notes.filter((note)=> note.title !== title)
 
     if(filteredNotes.length === notes.length) {
         console.log(chalk.red.inverse('No note found!'));

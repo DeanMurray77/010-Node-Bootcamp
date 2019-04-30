@@ -59,5 +59,3 @@ yargs.command({
 });
 
 yargs.parse();
-
-//1,3,6,8 points where the git color key changes...
