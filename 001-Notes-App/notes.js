@@ -34,9 +34,10 @@ const addNote = (title, body) => {
             title: title,
             body: body
         })
+        console.log(chalk.green.inverse("Note added!"));
         saveNotes(notes);
     } else {
-        console.log("A note already exists with that title");
+        console.log(chalk.red.inverse("A note already exists with that title"));
     }
 
 }
@@ -48,7 +49,6 @@ const removeNote = (title) => {
     })
 
     if(filteredNotes.length === notes.length) {
-        console.log("No note currently exists with that title.");
         console.log(chalk.red.inverse('No note found!'));
     } else {
         console.log(chalk.green.inverse("Note removed!"));
