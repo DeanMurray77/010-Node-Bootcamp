@@ -45,7 +45,12 @@ const removeNote = (title) => {
     const filteredNotes = notes.filter((note)=> {
         return note.title !== title;
     })
-    saveNotes(filteredNotes);
+
+    if(filteredNotes.length === notes.length) {
+        console.log("No note currently exists with that title.")
+    } else {
+        saveNotes(filteredNotes);
+    }
 }
 
 module.exports = {
