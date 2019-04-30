@@ -1,4 +1,5 @@
 const fs = require('fs');
+const chalk = require('chalk');
 
 const getNotes = () => {
     const notes = loadNotes();
@@ -47,8 +48,10 @@ const removeNote = (title) => {
     })
 
     if(filteredNotes.length === notes.length) {
-        console.log("No note currently exists with that title.")
+        console.log("No note currently exists with that title.");
+        console.log(chalk.red.inverse('No note found!'));
     } else {
+        console.log(chalk.green.inverse("Note removed!"));
         saveNotes(filteredNotes);
     }
 }
