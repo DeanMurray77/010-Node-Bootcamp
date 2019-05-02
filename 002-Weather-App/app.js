@@ -1,3 +1,9 @@
-var request = require('request');
+const request = require('request');
+const config = require('./config');
 
-const url = 'https://api.darksky.net/forecast/'
+let location = "37.8267,-122.4233";
+
+request( {url: config.url+location}, (error, response) => {
+//    console.log(error);
+   console.log(response);
+} )
