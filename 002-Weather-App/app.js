@@ -16,8 +16,10 @@ request( {url: mapBoxFinalURL, json: true}, (error, response) => {
     if(error) {
         console.log("Error, no such place found");
     } else {
+        const latitude = response.body.features[0].center[1];
+        const longitude = response.body.features[0].center[0];
         console.log(response.body.features[0].place_name);
-        console.log(response.body.features[0].center);
+        console.log(latitude, longitude);
     }
 } )
 
