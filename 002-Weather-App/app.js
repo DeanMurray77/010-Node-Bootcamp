@@ -24,6 +24,8 @@ request( {url: mapBoxFinalURL, json: true}, (error, response) => {
         console.log('The system was unable to connect to the location service.');
     } else if (response.body.message) {
         console.log("The location system returned an error.");
+    } else if (!response.body.features.length) {
+        console.log("No such location found");
     } else {
         const latitude = response.body.features[0].center[1];
         const longitude = response.body.features[0].center[0];
