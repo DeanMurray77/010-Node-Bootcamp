@@ -2,11 +2,18 @@ const request = require('request');
 const config = require('./config');
 
 let location = "41.0735,-111.9532";
-// console.log(config.url+location)
+console.log(config.url+location)
 request( {url: config.url+location, json: true}, (error, response) => {
-    console.log(response.body.daily.data[0].summary);
-    console.log(`Currently it is ${response.body.currently.temperature} degrees out.`);
-    console.log(`There is a ${response.body.currently.precipProbability}% chance of rain.`);
+    if(error) {
+        console.log('The system was unable to connect to the weather service.');
+    } else if (response.body.error) {
+        console.log("The system wasn't able to retrieve the weather for that location");        
+    } else {
+        console.log(response.body.daily.data[0].summary);
+        console.log(`Currently it is ${response.body.currently.temperature} degrees out.`);
+        console.log(`There is a ${response.body.currently.precipProbability}% chance of rain.`);
+    }
+
 })
 
 let lookupLocation = 'Layton Utah';
