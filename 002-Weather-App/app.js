@@ -21,7 +21,9 @@ let encodedLocation = encodeURI(lookupLocation);
 let mapBoxFinalURL = config.mapBoxURL+encodedLocation+'.json'+config.mapBoxAPIKey;
 request( {url: mapBoxFinalURL, json: true}, (error, response) => {
     if(error) {
-        console.log("Error, no such place found");
+        console.log('The system was unable to connect to the location service.');
+    } else if (response.body.message) {
+        console.log("The location system returned an error.");
     } else {
         const latitude = response.body.features[0].center[1];
         const longitude = response.body.features[0].center[0];
