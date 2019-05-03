@@ -8,3 +8,18 @@ const shortNames = names.filter((name) => {
 })
 
 console.log(shortNames);
+
+const geocode = (address, callback) => {
+    setTimeout(() => {
+        const data = {
+            latitude: 0,
+            longitude: 0
+        };
+    
+        callback(data);    
+    }, 3000)
+}
+
+geocode('Home', (data)=> {
+    console.log(data);
+});
