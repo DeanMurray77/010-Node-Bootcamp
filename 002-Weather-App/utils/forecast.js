@@ -19,11 +19,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (response.body.error) {
             callback("The system wasn't able to retrieve the weather for that location");        
         } else {
-            callback(undefined, {
-                daySummary: response.body.daily.data[0].summary,
-                currentTemp: `Currently it is ${response.body.currently.temperature} degrees out.`,
-                precipChance: `There is a ${response.body.currently.precipProbability}% chance of rain.`
-            })
+            callback(undefined, response.body.daily.data[0].summary + ` Currently it is ${response.body.currently.temperature} degrees out. There is a ${response.body.currently.precipProbability}% chance of rain.`)
         }
     })   
 }

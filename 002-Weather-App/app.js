@@ -7,7 +7,7 @@ geocode('Saint George, Utah', (error, data) => { //(error, data) is just the res
     console.log("Data:", data);   
 })
 
-forecast(41.0603, -111.9661, (error, data) => {
+forecast(37.11, -113.56, (error, data) => {
     console.log('Error', error)
     console.log('Data', data)
   })
