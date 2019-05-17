@@ -6,17 +6,17 @@ const location = process.argv[2];
 if(!location) {
     console.log("Please provide an address.");    
 } else {
-    geocode(location, (error, data) => { //(error, data) is just the response back via callback
+    geocode(location, (error, locationObject) => { //(error, data) is just the response back via callback
         if(error) {
             return console.log("Error:", error);
         }
         
-        forecast(data.latitude, data.longitude, (error, forecastData) => {
+        forecast(locationObject, (error, forecastData) => {
             if(error) {
                 return console.log('Error', error)
             }
     
-            console.log(data.location);
+            console.log(locationObject.location);
             console.log(forecastData);
         })
     })

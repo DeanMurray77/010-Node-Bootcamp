@@ -1,7 +1,7 @@
 const request = require('request');
 const config = require('../config');
 
-const forecast = (latitude, longitude, callback) => {
+const forecast = ({latitude, longitude}, callback) => {
     request( {url: config.url+latitude+','+longitude, json: true}, (error, response) => {
         if(error) {
             callback('The system was unable to connect to the weather service.');
