@@ -1,0 +1,104 @@
+/*Original*/
+.icon-success-circle {
+    color: $brand-success;
+  }
+  .icon-not-started-circle{
+    color: $brand-warning;
+  }
+  
+  .icon-warning-circle {
+    color: $brand-danger;
+  }
+  
+  
+  .panel-heading {
+    position: relative;
+  }
+  
+  .panel-body {
+    padding-top: 5px;
+    padding-bottom: 0px;
+  }
+  
+  .status-hr {
+    /*padding-top: 2px;*/
+    text-align: center;
+    font-size: 14px;
+    line-height: 2.8;
+  }
+  
+  .status-column {
+    padding: 5px;
+    text-align: center;
+  
+    i {
+      padding-left: 3px;
+    }
+  
+  }
+  
+  .service {
+  
+    .fa {
+      margin-top: 10px;
+        margin-bottom: 10px;
+      font-size: 18px;    
+      
+      .tooltiptext {
+          visibility: hidden;
+          width: 450px;
+          background-color: $gray-base;
+          color: $label-color;
+          text-align: left;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          font-size: 14px;
+          overflow: hidden;
+      }
+    }
+  }
+  
+  .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: $gray-base;
+      color: $label-color;
+      text-align: left;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      font-size: 14px;
+      overflow: visible;
+  }
+  
+  .fa:hover .tooltiptext {
+      visibility: visible;
+  }
+  
+  .margin_override {
+    margin-left: -30em; 
+  }
+  .status-hr, .status-header {
+    padding: 5px;
+  }
+  .panel-heading, .panel-heading .panel-heading-col, .panel-body {
+    padding: 5px !important;
+  }
+  .panel-heading .row, .service {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .panel-title {
+    line-height: 1.4
+  }
+  .icon {
+    font-size: 15px;
+    margin: 5px 0;
+    display: inline-block;
+  }
+  .comment-tooltip .tooltip-inner {
+    max-width:750px;
+  }
