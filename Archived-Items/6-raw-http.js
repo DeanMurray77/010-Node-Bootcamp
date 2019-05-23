@@ -1,5 +1,5 @@
 const https = require('https');
-const config = require('../002-Weather-App/config');
+const config = require('../002-Weather-App/config'); //So I don't store the API key on github in plain text.
 
 const request = https.request(config.url+'37.0965,-113.5684', (response) => {
     let data = '';
