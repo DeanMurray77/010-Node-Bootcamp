@@ -1,4 +1,4 @@
-// Changed
+// Play
 (function() {
 	// populate the 'data' object
 	// e.g., data.table = $sp.getValue('table');
@@ -17,7 +17,7 @@
 	}
 	
 	var s = new PmProjectStatusReport();
-	data.limit = 11;
+	data.limit = 9;
 	var endDate = new GlideDate();
 	
 	var statuses = s.getStatuses($sp.getParameter('sysparm_sys_id'), endDate, data.limit);
@@ -49,13 +49,4 @@
 		data.dates.push(statuses[i].date);
 	}
 	//gs.info("cost_comment: " + (new JSON()).encode(data.statuses.cost));
-	
-	data.datesArray = [];
-	for(i=0; i<data.dates.length;i++) {
-		data.datesArray.push(i);
-	}
-	
-	//Debugging Line - remove later
-	console.log(data);
-	
 })();

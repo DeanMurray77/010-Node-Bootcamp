@@ -1,26 +1,25 @@
-<!--Changed-->
+<!--Play-->
 <div class="panel panel-{{::c.options.color}} b">
     <div class="panel-heading">   
       <div class="hidden-xs row">
-        <span class="col-sm-1">
-          <div class="status-hr panel-title "><strong>${Status History}</strong></div>
+        <span class="col-sm-3 panel-heading-col">
+          <div class="panel-title">${Status History}</div>
         </span>
-        <span id="no-print" ng-repeat="date in data.dates track by $index" class="col-sm-1 status-hr panel-title" ng-bind="date"></span>
+        <span ng-repeat="date in data.dates track by $index" class="col-sm-1 status-hr panel-title" ng-bind="date"></span>
       </div>
     </div>
-  
+    
     <div class="hidden-xs panel-body" ng-repeat="category in c.data.categories">
       <div class="row service">
-        <div class="col-sm-1 bold">	
-          <h5 ng-bind="::category.label"></h5>  
-        </div>
-        <div id="no-print" ng-repeat="n in data.datesArray track by $index" class="col-sm-1 status-column">
-          <span id="no-print2" class="fa" ng-class="c.data.statuses[category.name][n].icon">
-            <span class="tooltiptext" ng-if="c.data.statuses[category.name][n].comment && n<=5" ng-bind-html="c.data.statuses[category.name][n].comment"></span>
+          <div class="col-sm-3 bold status header">	
+                <h5 ng-bind="::category.label"></h5>  
+          </div>
+        <div ng-repeat="n in [0,1,2,3,4,5,6,7,8] track by $index" class="col-sm-1  status-column">
+          <span class="fa" ng-class="c.data.statuses[category.name][n].icon">
+             <span class="tooltiptext" ng-if="c.data.statuses[category.name][n].comment && n<=5" ng-bind-html="c.data.statuses[category.name][n].comment"></span>
             <span class="tooltiptext margin_override" ng-if="c.data.statuses[category.name][n].comment && n>5" ng-bind-html="c.data.statuses[category.name][n].comment"></span>
           </span>    
         </div>
       </div>
     </div>
-  </div>
-  
+  </div>  
