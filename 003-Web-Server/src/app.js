@@ -11,7 +11,11 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-    res.send("Here is the about page");
+    res.send({
+        What: "A weather app",
+        "Created by": "Dean Murray",
+        Working: 'Sort of'
+    });
 })
 
 app.get('/weather', (req, res) => {
