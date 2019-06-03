@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 app.get('', (req, res) => {
-    res.send("Hello express!");
+    res.send("<h1>Weather App</h1><p>All weather, all of the time</p>");
 })
 
 app.get('/help', (req, res) => {
