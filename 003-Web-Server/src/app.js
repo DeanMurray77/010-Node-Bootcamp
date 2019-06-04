@@ -11,15 +11,14 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-    res.send({
-        What: "A weather app",
-        "Created by": "Dean Murray",
-        Working: 'Sort of'
-    });
+    res.send("<h1>About:</h1>");
 })
 
 app.get('/weather', (req, res) => {
-    res.send("Here is the weather, so much weather");
+    res.send({
+        location: 'Layton',
+        forecast: "Sunny with a high of 77"
+    });
 })
 
 app.listen(3000, ()=>{
