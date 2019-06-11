@@ -36,7 +36,8 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        helpMessage: 'If you need help, please email support@site.com'
+        helpMessage: 'If you need help, please email support@site.com',
+        name: 'Dean Murray'
     });
 })
 
