@@ -49,11 +49,19 @@ app.get('/weather', (req, res) => {
 })
 
 app.get('/help/*', (req, res) => {
-    res.send('My help-specific 404 page');
+    res.render('404', {
+        message: "Help article not found",
+        title: "404",
+        name: "Dean Murray"
+    });
 })
 
 app.get('*', (req, res) => {
-    res.send('My temp 404 page');
+    res.render('404', {
+        message: "Page not found",
+        title: "404",
+        name: 'Dean Murray'
+    });
 })
 
 app.listen(3000, ()=>{
