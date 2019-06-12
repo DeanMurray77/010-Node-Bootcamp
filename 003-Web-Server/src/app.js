@@ -48,6 +48,15 @@ app.get('/weather', (req, res) => {
     });
 })
 
+app.get('/products', (req, res) => {
+    console.log(req.query.category);
+    
+    res.send({
+        products: [],
+        providedBy: 'Dean Murray'
+    });
+})
+
 app.get('/help/*', (req, res) => {
     res.render('404', {
         errorMessage: "Help article not found",
