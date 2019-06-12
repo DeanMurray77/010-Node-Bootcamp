@@ -49,7 +49,11 @@ app.get('/weather', (req, res) => {
 })
 
 app.get('/products', (req, res) => {
-    console.log(req.query.category);
+    if(!req.query.category) {
+        return res.send({
+            error: 'You must provide a category'
+        })
+    }
     
     res.send({
         products: [],
