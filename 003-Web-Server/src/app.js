@@ -50,7 +50,7 @@ app.get('/weather', (req, res) => {
 
 app.get('/help/*', (req, res) => {
     res.render('404', {
-        message: "Help article not found",
+        errorMessage: "Help article not found",
         title: "404",
         name: "Dean Murray"
     });
@@ -58,7 +58,7 @@ app.get('/help/*', (req, res) => {
 
 app.get('*', (req, res) => {
     res.render('404', {
-        message: "Page not found",
+        errorMessage: "Page not found",
         title: "404",
         name: 'Dean Murray'
     });
