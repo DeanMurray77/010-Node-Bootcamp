@@ -42,22 +42,16 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
-    res.send({
-        location: 'Layton',
-        forecast: "Sunny with a high of 77"
-    });
-})
-
-app.get('/products', (req, res) => {
-    if(!req.query.category) {
+    if(!req.query.address) {
         return res.send({
-            error: 'You must provide a category'
+            error: 'You must provide an address'
         })
     }
-    
+
     res.send({
-        products: [],
-        providedBy: 'Dean Murray'
+        location: 'Layton',
+        forecast: "Sunny with a high of 77",
+        address: req.query.address
     });
 })
 
