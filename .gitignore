@@ -62,3 +62,6 @@ typings/
 
 # Passwords & Config Information
 config.js
+
+# Mac OS file(s)
+.DS_Store
