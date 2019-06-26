@@ -7,3 +7,10 @@ fetch('/weather?address=boston').then((response) => {
         }
     })
 })
+
+const weatherForm = document.querySelector('form');
+
+weatherForm.addEventListener('submit', () => {
+    // event.preventDefault();
+    console.log('The button was clicked');
+})
