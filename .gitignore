@@ -64,4 +64,4 @@ typings/
 config.js
 
 # Mac OS file(s)
-.DS_Store
+*.DS_Store
