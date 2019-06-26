@@ -1,10 +1,13 @@
 const weatherForm = document.querySelector('form');
+const search = document.querySelector('input');
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault();
     
     let route = '/weather?address=';
-    route += event.target.elements.inputLocation.value;
+    const location = search.value;
+    console.log(location);
+    route += location;
     fetch(route).then((response) => {
         response.json().then((data) => {
             if(!data.error) {
