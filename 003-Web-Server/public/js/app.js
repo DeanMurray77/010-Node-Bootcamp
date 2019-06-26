@@ -4,10 +4,8 @@ const search = document.querySelector('input');
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault();
     
-    let route = '/weather?address=';
     const location = search.value;
-    route += location;
-    fetch(route).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if(!data.error) {
                 console.log(`The forecast for ${data.location} is ${data.forecast}`);
