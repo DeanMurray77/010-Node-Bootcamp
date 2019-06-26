@@ -6,7 +6,6 @@ weatherForm.addEventListener('submit', (event) => {
     
     let route = '/weather?address=';
     const location = search.value;
-    console.log(location);
     route += location;
     fetch(route).then((response) => {
         response.json().then((data) => {
