@@ -6,20 +6,20 @@ const add = (a,b) => {
     })
 }
 
-add(1,2).then((sum) => {
-    console.log(sum);
-    add(sum, 5).then((sum2) => {
-        console.log(sum2);
-    }).catch((e2) => {
-        console.log(e2);
-    })
-}).catch((e) => {
-    console.log(e);
-})
+// add(1,2).then((sum) => {
+//     console.log(sum);
+//     add(sum, 5).then((sum2) => {
+//         console.log(sum2);
+//     }).catch((e2) => {
+//         console.log(e2);
+//     })
+// }).catch((e) => {
+//     console.log(e);
+// })
 
 add(3,7).then((sum) => {
     console.log(sum);
-    return add(sum, 10);
+    return add(sum, 10); //Returning a promise...
 }).then((sum2) => {
     console.log(sum2);
 }).catch((e) => {
